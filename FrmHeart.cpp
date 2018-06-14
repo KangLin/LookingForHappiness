@@ -22,6 +22,10 @@ CFrmHeart::~CFrmHeart()
 
 void CFrmHeart::paintEvent(QPaintEvent *event)
 {
+    Q_UNUSED(event);
+    QPainter painter(this);
+    QImage image(":/png/Backgroup");
+    painter.drawImage(0, 0, image);
     drawHeart();
 }
 

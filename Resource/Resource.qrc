@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/png">
+        <file alias="Backgroup">png/backgroup.jpg</file>
+    </qresource>
+</RCC>
