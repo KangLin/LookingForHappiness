@@ -5,12 +5,19 @@
 #include <QRect>
 #include <QResizeEvent>
 #include <QPaintEvent>
+#include "breadthfirstsearch.h"
+#include "hexagonalmaze.h"
+#include "circularhexagonmaze.h"
+#include "circularmaze.h"
 
 CFrmHeart::CFrmHeart(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::CFrmHeart)
+    ui(new Ui::CFrmHeart),
+    m_pMaze(NULL)
 {
     ui->setupUi(this);
+
+    initMaze();
     initHeart();
     m_nWallWidth = m_nWallHeight = 5;
 }
@@ -25,7 +32,7 @@ void CFrmHeart::paintEvent(QPaintEvent *event)
     Q_UNUSED(event);
     QPainter painter(this);
     QImage image(":/png/Backgroup");
-    painter.drawImage(0, 0, image);
+    painter.drawImage(this->geometry(), image);
     drawHeart();
 }
 
@@ -40,6 +47,22 @@ void CFrmHeart::resizeEvent(QResizeEvent *event)
 
     m_nHeartX = (w - m_nWallWidth * X) >> 1;
     m_nHeartY = (h - m_nWallHeight * Y) >> 1;
+}
+
+int CFrmHeart::initMaze()
+{
+    int nRet = 0;
+    //TODO:
+    m_pMaze = new HexagonalMaze(100);
+    if(NULL == m_pMaze)
+        return -1;
+    m_pMaze->InitialiseGraph();
+    std::auto_ptr<MinimumSpanningtreeAlgorithm> pAlgorithm(new BreadthFirstSearch());
+    m_pMaze->GenerateMaze(pAlgorithm.get());
+    
+    m_pMaze->PrintMazeSVG("Maze");
+
+    return nRet;
 }
 
 int CFrmHeart::initHeart()

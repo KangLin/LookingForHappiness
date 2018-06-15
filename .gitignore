@@ -1,11 +1,6 @@
-Translations.qrc
-Plugin/PluginStatic.cpp
-Plugin/PluginStatic.pri
-Plugin/build-*/
 Makefile.Debug
 Makefile.Release
 Version.h
-Update/Update_*.xml
 *.bak
 *~
 *.autosave
@@ -21,7 +16,6 @@ build_unix_mingw/
 build_windows_mingw/
 build_unix/
 build_windows_msvc/
-RabbitIm/
 *.ncb
 .metadata/
 *~
@@ -112,17 +106,6 @@ release/
 Release/
 ipch/
 IncludeLocalDatabase.txt
-ThirdLibrary/unix_mingw/
-ThirdLibrary/unix/
-ThirdLibrary/unix_static/
-ThirdLibrary/android/
-ThirdLibrary/android_static/
-ThirdLibrary/windows_msvc/
-ThirdLibrary/windows_mingw/
-ThirdLibrary/src/
-ThirdLibrary/windows_mingw_static/
-ThirdLibrary/windows_msvc_static/
-rabbitim.kdev4
 *.pro.user.*
 Doxygen/
 Doxyfile

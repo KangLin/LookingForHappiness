@@ -26,11 +26,35 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    FrmHeart.cpp
+        FrmHeart.cpp \
+        maze.cpp \
+        rectangularmaze.cpp \
+        circularmaze.cpp \
+        circularhexagonmaze.cpp \
+        hexagonalmaze.cpp \
+        honeycombmaze.cpp \
+        minimumspanningtreealgorithm.cpp \
+        kruskal.cpp \
+        depthfirstsearch.cpp \
+        breadthfirstsearch.cpp \
+        cellborder.cpp \ 
+    Draw.cpp
 
 HEADERS += \
         mainwindow.h \
-    FrmHeart.h
+        FrmHeart.h \
+        maze.h \
+        rectangularmaze.h \
+        circularmaze.h \
+        circularhexagonmaze.h \
+        hexagonalmaze.h \
+        honeycombmaze.h \
+        minimumspanningtreealgorithm.h \
+        kruskal.h \
+        depthfirstsearch.h \
+        breadthfirstsearch.h \
+        cellborder.h \ 
+    Draw.h
 
 FORMS += \
         mainwindow.ui \

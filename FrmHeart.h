@@ -2,6 +2,8 @@
 #define FRMHEART_H
 
 #include <QWidget>
+#include "rectangularmaze.h"
+#include "circularmaze.h"
 
 namespace Ui {
 class CFrmHeart;
@@ -20,6 +22,7 @@ protected:
     virtual void resizeEvent(QResizeEvent *event);
 
 private:
+    int initMaze();
     int initHeart();
     int drawHeart();
 
@@ -34,6 +37,8 @@ private:
 
 private:
     Ui::CFrmHeart *ui;
+    
+    Maze* m_pMaze;
 };
 
 #endif // FRMHEART_H
