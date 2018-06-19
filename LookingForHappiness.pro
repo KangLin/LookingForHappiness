@@ -66,3 +66,10 @@ MOBILITY =
 RESOURCES += \
     Resource/Resource.qrc
 
+OTHER_FILES += tag.sh \
+    .travis.yml \
+    appveyor.yml \
+    .gitignore \
+    ci/* \
+    Install/Install.nsi
+

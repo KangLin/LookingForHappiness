@@ -6,8 +6,7 @@
 #include <vector>
 #include "cellborder.h"
 
-typedef std::vector<std::vector<std::pair<int, std::shared_ptr<CellBorder>>>>
-Graph;
+typedef std::vector<std::vector<std::pair<int, std::shared_ptr<CellBorder>>>> Graph;
 
 class MinimumSpanningtreeAlgorithm {
 public:
