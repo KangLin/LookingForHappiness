@@ -2,5 +2,8 @@
 
 CDraw::CDraw()
 {
-    
+}
+
+CDraw::~CDraw()
+{
 }

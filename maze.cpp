@@ -9,6 +9,8 @@ Maze::Maze(int vertices, int startvertex, int endvertex)
 void Maze::InitialiseGraph() {
     adjacencylist_.clear();
     adjacencylist_.resize(vertices_);
+    maze_.clear();
+    maze_.resize(vertices_);
 }
 
 void Maze::GenerateMaze(MinimumSpanningtreeAlgorithm* algorithm) {
@@ -112,10 +114,14 @@ int Maze::onDraw(CDraw *pDraw, int nWidth, int nHeight) const
     double xmin, ymin, xmax, ymax;
     std::tie(xmin, ymin, xmax, ymax) = GetCoordinateBounds();
     
+    int w = 0;
+    int h = 0;
+    w = nWidth / xmax;
+    h = nHeight / ymax;
     for (int i = 0; i < vertices_; ++i) {
         for (const auto& edge : adjacencylist_[i]) {
             if (edge.first < i) {
-                edge.second->onDraw(pDraw, nWidth, nHeight);
+                edge.second->onDraw(pDraw, w, h);
             }
         }
     }

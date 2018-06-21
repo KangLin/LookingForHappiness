@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>CFrmHeart</class>
- <widget class="QWidget" name="CFrmHeart">
+ <author/>
+ <comment/>
+ <exportmacro/>
+ <class>CFrmMaze</class>
+ <widget class="QWidget" name="CFrmMaze">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,10 +15,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
-  </property>
  </widget>
- <resources/>
+ <pixmapfunction/>
  <connections/>
 </ui>

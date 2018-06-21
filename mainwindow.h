@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "FrmHeart.h"
+#include "FrmMaze.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,7 +19,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    CFrmHeart m_frmHeart;
+    CFrmMaze m_frmMaze;
 };
 
 #endif // MAINWINDOW_H

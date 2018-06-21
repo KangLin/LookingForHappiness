@@ -1,6 +1,7 @@
 #include "cellborder.h"
 #include <cmath>
 #include <tuple>
+#include <string>
 
 LineBorder::LineBorder(double x1, double y1, double x2, double y2)
     : x1_(x1), y1_(y1), x2_(x2), y2_(y2) {}
@@ -25,7 +26,7 @@ std::string LineBorder::SVGPrintString() const {
 int LineBorder::onDraw(CDraw* pDraw, int nWidth, int nHeight) const
 {
     int nRet = 0;
-    
+    pDraw->drawLine(x1_ * nWidth, y1_* nHeight, x2_ * nWidth, y2_ * nHeight);
     return nRet;
 }
 

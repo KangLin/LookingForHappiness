@@ -26,7 +26,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-        FrmHeart.cpp \
         maze.cpp \
         rectangularmaze.cpp \
         circularmaze.cpp \
@@ -38,11 +37,12 @@ SOURCES += \
         depthfirstsearch.cpp \
         breadthfirstsearch.cpp \
         cellborder.cpp \ 
-    Draw.cpp
+    Draw.cpp \
+    FrmMaze.cpp \
+    QtDraw.cpp
 
 HEADERS += \
         mainwindow.h \
-        FrmHeart.h \
         maze.h \
         rectangularmaze.h \
         circularmaze.h \
@@ -54,13 +54,15 @@ HEADERS += \
         depthfirstsearch.h \
         breadthfirstsearch.h \
         cellborder.h \ 
-    Draw.h
+    Draw.h \
+    FrmMaze.h \
+    QtDraw.h
 
 FORMS += \
         mainwindow.ui \
-    FrmHeart.ui
+    FrmMaze.ui
 
-CONFIG += mobility
+CONFIG += mobility c++11
 MOBILITY = 
 
 RESOURCES += \

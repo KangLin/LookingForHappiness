@@ -22,7 +22,13 @@ public:
 protected:
     // Solving a maze is equivalent to finding a path in a graph
     int vertices_;
-    std::vector<std::vector<std::pair<int, std::shared_ptr<CellBorder>>>> adjacencylist_;
+    enum MAZE_TYPE{
+        OUT_WALL,
+        WALL,
+        ROAD
+    };
+    std::vector<MAZE_TYPE> maze_;
+    std::vector<std::vector<std::pair<int, std::shared_ptr<CellBorder>>>> adjacencylist_;    
     int startvertex_, endvertex_;
     
     virtual std::tuple<double, double, double, double> GetCoordinateBounds() const = 0;
